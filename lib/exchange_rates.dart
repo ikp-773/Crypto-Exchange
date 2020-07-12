@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-class CoinData {
+class ExchangeRates {
   Future<dynamic> getExchangeRate(String cash) async {
     Map<String, String> exchangeRates = {};
     for (String crypto in cryptoList) {

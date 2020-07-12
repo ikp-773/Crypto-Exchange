@@ -3,7 +3,6 @@ import 'package:flutter/widgets.dart';
 import '../cards.dart';
 
 class Conversion extends StatefulWidget {
-  static String id = 'covertion';
   Conversion({this.cash, this.crypto, this.exchangeRate});
   final cash;
   final crypto;
@@ -59,15 +58,19 @@ class _ConversionState extends State<Conversion> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('💲Conversion💲'),
+        title: Text(
+          '💲Conversion💲',
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+          ),
+        ),
       ),
-      backgroundColor: Color(0xFF252525),
       body: Center(
         child: ListView(
           shrinkWrap: true,
           children: <Widget>[
             SizedBox(
-              height: 180,
+              height: 150,
               child: Flexible(
                 child: Image.asset('images/bitkey.jpg'),
               ),
@@ -92,7 +95,7 @@ class _ConversionState extends State<Conversion> {
               },
             ),
             SizedBox(
-              height: 70,
+              height: 60,
             ),
             Cards(
               txt: swap()
@@ -104,6 +107,9 @@ class _ConversionState extends State<Conversion> {
             ),
             FinalVal(
               rate: values.toStringAsFixed(2),
+            ),
+            SizedBox(
+              height: 15,
             ),
           ],
         ),

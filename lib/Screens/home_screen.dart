@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import '../exchange_rates.dart';
 import 'package:flutter/cupertino.dart';
 import '../cards.dart';
-import 'package:loader_overlay/loader_overlay.dart';
 import 'dart:io' show Platform;
 
 class HomeScreen extends StatefulWidget {
-  static String id = 'price_screen';
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -77,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void updateRates() async {
     isWaiting = true;
     try {
-      var data = await CoinData().getExchangeRate(selectedCurrency);
+      var data = await ExchangeRates().getExchangeRate(selectedCurrency);
       isWaiting = false;
       setState(() {
         coinValues = data;
@@ -113,33 +111,30 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return LoaderOverlay(
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            ' 💲 Crypto Exchange',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-            ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          ' 💲 Crypto Exchange',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: Colors.white30,
-        body: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              makeCards(),
-            ],
-          ),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            makeCards(),
+          ],
         ),
-        bottomNavigationBar: Container(
-          height: 120.0,
-          alignment: Alignment.center,
-          padding: EdgeInsets.only(bottom: 30.0),
-          color: Color(0xFFE79526),
-          child: Platform.isAndroid ? androidDropDownButton() : iOSPicker(),
-        ),
+      ),
+      bottomNavigationBar: Container(
+        height: 120.0,
+        alignment: Alignment.center,
+        padding: EdgeInsets.only(bottom: 30.0),
+        color: Color(0xFFE79526),
+        child: Platform.isAndroid ? androidDropDownButton() : iOSPicker(),
       ),
     );
   }
