@@ -1,16 +1,8 @@
-# crypto_exchange
+# Crypto Exchange
 
 Crypto currency exchange value and easy converter.
 
-## Getting Started
+Its a cross platform appliction devoloped using Flutter.
 
-This project is a starting point for a Flutter application.
+Crypto Exchange displays and monitors the current crypto currencies exchange rates. Also at your disposal is usable cryptocurrency converter, in which you can ccompare Crypto currency price to Fiat currency prices.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
