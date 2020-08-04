@@ -113,10 +113,12 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Crypto Exchange',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
+        title: Center(
+          child: Text(
+            'Crypto Exchange',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),
