@@ -114,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          ' 💲 Crypto Exchange',
+          'Crypto Exchange',
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
@@ -130,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       bottomNavigationBar: Container(
-        height: 120.0,
+        height: 119.0,
         alignment: Alignment.center,
         padding: EdgeInsets.only(bottom: 30.0),
         color: Color(0xFFE79526),
