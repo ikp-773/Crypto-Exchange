@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: ' Crypto Exchange',
+      title: 'Crypto Exchange',
       theme: ThemeData.dark().copyWith(
         primaryColor: Color(0xFFE79526),
         scaffoldBackgroundColor: Color(0xFF252525),
