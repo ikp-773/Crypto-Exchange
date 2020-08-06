@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Center(
         child: SplashScreen(
-          seconds: 1,
+          seconds: 2,
           navigateAfterSeconds: HomeScreen(),
           image: Image.asset('images/bitcoin.png'),
           photoSize: 120,
