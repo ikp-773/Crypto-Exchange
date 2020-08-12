@@ -1,6 +1,7 @@
 # Crypto Exchange
 
-Crypto currency exchange value and easy converter.
+Crypto currency exchange value and easy converter, welxome
+.
 
 Its a cross platform appliction for Android and iOS devoloped using #Flutter.
 
